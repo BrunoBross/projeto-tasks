@@ -10,7 +10,7 @@
 
 .task-container{
     background-color: #444;
-    margin: 8px 0;
+    margin-top: 8px;
     display: flex;
     border-radius: 5px;
     justify-content: space-between;
@@ -26,7 +26,6 @@
     background-color: transparent;
     border: none;
     font-size: 24px;
-    color: #bc57ff;
     height: 3rem;
     width: 3rem;
     margin-right: 5px;
@@ -37,10 +36,13 @@
     background-color: transparent;
     border: none;
     font-size: 24px;
-    color: #bc57ff;
     height: 3rem;
     width: 3rem;
     transition: 0.3s;
+}
+
+#task-button{
+    color: #bc57ff;
 }
 
 .remove-task-button:hover, .see-task-button:hover{

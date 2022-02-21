@@ -1,7 +1,8 @@
 import React from "react";
-import Task from "./Task";
+import Task from './Task'
 
-const Tasks = ({tasks, handleTaskClick, handleTaskDeletion, handleTaskDeletionConfirm}) => {
+const Tasks = ({tasks, handleTaskClick, handleTaskDeletion, handleTaskDeletionConfirm, handleTaskInfo}) => {
+
     return(
         <>
             {tasks.map(task => (
@@ -10,6 +11,7 @@ const Tasks = ({tasks, handleTaskClick, handleTaskDeletion, handleTaskDeletionCo
                     handleTaskClick={handleTaskClick}
                     handleTaskDeletionConfirm={handleTaskDeletionConfirm}
                     handleTaskDeletion={handleTaskDeletion}
+                    handleTaskInfo={handleTaskInfo}
                 />
             ))}
         </>

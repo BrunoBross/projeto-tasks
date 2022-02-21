@@ -1,19 +1,11 @@
 import React from 'react';
 import {IoIosRemoveCircleOutline, IoIosInformationCircleOutline} from 'react-icons/io'
-import {useHistory} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Confirm from './Confirm';
 
 import "./Task.css"
 
-const Task = ({task, handleTaskClick, handleTaskDeletion, handleTaskDeletionConfirm}) => {
-    const history = useHistory();
-
-    const handleTaskDetailsClick = () => {
-        if(task.deleting){
-            task.deleting = false;
-        }
-        history.push(`/${task.title}`)
-    }
+const Task = ({task, handleTaskClick, handleTaskDeletion, handleTaskDeletionConfirm, handleTaskInfo}) => {
 
     return ( 
         <>
@@ -24,12 +16,12 @@ const Task = ({task, handleTaskClick, handleTaskDeletion, handleTaskDeletionConf
                     </div>
 
                     <div className="buttons-container">
-                        <button className="see-task-button" onClick={handleTaskDetailsClick}>
-                            <IoIosInformationCircleOutline/>
+                        <button className="see-task-button" onClick={() => handleTaskInfo(task.id)}>
+                            <Link id="link" to="/details" state={{task: task}}><IoIosInformationCircleOutline id="task-button"/></Link>
                         </button>
 
                         <button className="remove-task-button" onClick={() => handleTaskDeletionConfirm(task.id)}>
-                            <IoIosRemoveCircleOutline/>
+                            <IoIosRemoveCircleOutline id="task-button"/>
                         </button>
                     </div>
                 </div> 
