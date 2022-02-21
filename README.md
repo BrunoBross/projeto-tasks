@@ -1,4 +1,4 @@
 #Projeto Tasks do @Felipe Rocha
 
-faltam algumas funcionalidades
+Adicionado funcionalidades extras
 [Link do Deploy](https://projetotasks.netlify.app/)
