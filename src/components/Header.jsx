@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Header.css'
 
-const Header = () => {
+const Header = ({children}) => {
     return ( 
-        <h2>Minhas Tarefas</h2>
+        <h2 title="Title">{children}</h2>
     );
 }
  

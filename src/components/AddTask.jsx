@@ -23,17 +23,22 @@ const AddTask = ({handleTaskAddition, placeholder}) => {
 
     return ( 
         <div className="add-task-container">
-            <input 
-                onChange={handleInputTitleChange}
-                value={inputTitleData}
-                placeholder={placeholder}
-                className="add-task-input" 
-                type="text"
-                onSubmit
-                id="add-title"
-            />
+            <div className="top-input">
+                <input 
+                    onChange={handleInputTitleChange}
+                    value={inputTitleData}
+                    placeholder={placeholder}
+                    className="add-task-input" 
+                    type="text"
+                    onSubmit
+                    id="add-title"
+                />
 
-            <input 
+                <div className="add-task-button-container">
+                    <Button onClick={handleAddTaskClick}>Adicionar</Button>
+                </div>
+            </div>
+            <textarea 
                 onChange={handleInputDescriptionChange}
                 value={inputDescriptionData}
                 placeholder="Descrição"
@@ -42,10 +47,6 @@ const AddTask = ({handleTaskAddition, placeholder}) => {
                 onSubmit
                 id="add-description"
             />
-            
-            <div className="add-task-button-container">
-                <Button onClick={handleAddTaskClick}>Adicionar</Button>
-            </div>
             
         </div>
     );

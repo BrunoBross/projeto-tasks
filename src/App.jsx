@@ -16,7 +16,6 @@ const App = () => {
           {/* <Route path="*" element={<NotFound/>}/> */}
         </Routes>
       </div>
-      <h4 style={{color:'#FFF', textAlign:'center', marginBottom:'2rem'}}>Projeto React do Curso @Felipe Rocha</h4>
     </BrowserRouter>
   )
 }

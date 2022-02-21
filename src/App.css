@@ -3,7 +3,7 @@
     margin: 80px auto;
     overflow: auto;
     min-height: 300px;
-    border: 2px solid #bc57ff;
+    background-color: #272727;
     padding: 30px;
     border-radius: 10px;
     overflow: hidden;
@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 600px) {
     .container{
-        border: none;
+        background-color: transparent;
     }
 }
 

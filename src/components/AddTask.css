@@ -1,9 +1,16 @@
-.add-task-container{
-    margin: 15px 0;
+.top-input{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 8px;
+}
+
+#add-title{
+    flex: 3;
+}
+
+.add-task-container{
+    margin: 10px 0 20px 0;
 }
 
 .add-task-input{
@@ -20,4 +27,17 @@
 
 .add-task-button-container{
     flex: 1;
+}
+
+
+#add-description{
+    margin-top: 8px;
+    width: 100%;
+    resize: vertical;
+    min-height: 40px;
+    display: flex;
+    padding-top: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;;
 }

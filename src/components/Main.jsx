@@ -28,6 +28,11 @@ const Main = () => {
 
   const handleTaskAddition = (taskTitle, taskDescription) => {
     
+    let date = new Date()
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let hours = `${hour}:${minute}`
+
     const newTasks = [
       ...tasks, 
       {
@@ -36,6 +41,7 @@ const Main = () => {
         description: taskDescription,
         completed: false,
         deleting: false,
+        time: hours
     }]
 
     if(newTasks){
@@ -66,11 +72,12 @@ const Main = () => {
 
   return(
     <>
-        <Header/>
+        <Header>Minhas Tarefas</Header>
 
         <AddTask handleTaskAddition={handleTaskAddition} placeholder="Nome da tarefa"/>
 
-        {tasks.length > 0 ? 
+        <div className="tasks">
+          {tasks.length > 0 ? 
             <Tasks 
             tasks={tasks} 
             handleTaskClick={handleTaskClick}
@@ -81,7 +88,10 @@ const Main = () => {
             style={{color: '#FFF', marginLeft: '2px'}}>
             Não há nenhuma tarefa registrada
             </p>
-        }
+          }
+        </div>
+            
+        
     </>
       
   )
